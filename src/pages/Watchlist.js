@@ -5,21 +5,21 @@ import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from '../function/get100Coins';
 
 function Watchlist() {
-  const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   const [coins, setCoins] = useState([]);
+  const [watchlist, setWatchlist] = useState(() => JSON.parse(localStorage.getItem("watchlist")) || []);
 
   useEffect(() => {
-    if (watchlist) {
-      getData();
-    }
-  }, []);
+    const fetchData = async () => {
+      if (watchlist.length > 0) {
+        const allCoins = await get100Coins();
+        if (allCoins) {
+          setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
+        }
+      }
+    };
 
-  const getData = async () => {
-    const allCoins = await get100Coins();
-    if (allCoins) {
-      setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
-    }
-  };
+    fetchData();
+  }, [watchlist]); // Include watchlist in dependency array
 
   return (
     <div>

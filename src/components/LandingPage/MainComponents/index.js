@@ -5,8 +5,7 @@ import Button from "../../Common/Button";
 import iphone from "../../../assets/iphone.png";
 import gradient from "../../../assets/gradient.png";
 import {motion} from "framer-motion";
-import { duration } from '@mui/material';
-import { Opacity } from '@mui/icons-material';
+
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
 const MainComponent = () => {
@@ -45,7 +44,7 @@ const MainComponent = () => {
           duration: 2,
           repeat: Infinity,
         }}/>
-        <img src={gradient} className='gradient'/>
+        <img src={gradient} alt="Description of the image" className='gradient'/>
       </div>
     </div>
   )

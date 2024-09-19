@@ -33,7 +33,7 @@
     width: 1.5rem !important;
   }
   
-  .watchlist-icon-red {
+.watchlist-icon-red {
     border: 2px solid var(--red);
     color: var(--red);
   }

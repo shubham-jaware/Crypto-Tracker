@@ -9,7 +9,7 @@ import CoinInfo from '../components/Coin/CoinInfo';
 import { getCoinData } from '../function/getCoinData';
 import { getCoinPrices } from '../function/getCoinPrices';
 import LineChart from '../components/Coin/LineChart';
-import { borderColor } from '@mui/system';
+
 import SelectDays from '../components/Coin/SelectDays';
 import TogglePriceType from '../components/Coin/PriceType';
 import { settingChartData } from '../function/settingChartData';

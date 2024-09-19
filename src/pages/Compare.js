@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Common/Header'
 import SelectCoins from '../components/Compare/SelectCoins'
-import SelectDays from '../components/Coin/SelectDays';
-import { FirstPage } from '@mui/icons-material';
+
 import { getCoinData } from '../function/getCoinData';
 import { getCoinPrices } from '../function/getCoinPrices';
-import { coinObject } from '../function/convertObject';
+
 import Loader from '../components/Common/Loader';
 import { List } from '@mui/material';
 import { settingChartData } from '../function/settingChartData';

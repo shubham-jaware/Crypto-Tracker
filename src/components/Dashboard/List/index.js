@@ -18,7 +18,7 @@ function List({ coin }) {
         <tr className='list-row'>
             <Tooltip title="Coin Logo">
                 <td className='td-image'>
-                    <img src={coin.image} className='coin-logo' />
+                    <img src={coin.image} alt="Description of the image" className='coin-logo' />
                 </td>
             </Tooltip>
             <Tooltip title='Coin Info ' placement='bottom-start'>
